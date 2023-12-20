@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>THÚ CƯNG</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free HTML Templates" name="keywords">
+    <meta content="Free HTML Templates" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Roboto:wght@700&display=swap" rel="stylesheet">  
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="lib/flaticon/font/flaticon.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <style>
+        #snowflakeContainer{position:absolute;left:0px;top:0px;}
+        .snowflake{padding-left:15px;font-size:14px;line-height:24px;position:fixed;color:#ebebeb;user-select:none;z-index:1000;-moz-user-select:none;-ms-user-select:none;-khtml-user-select:none;-webkit-user-select:none;-webkit-touch-callout:none;}
+        .snowflake:hover {cursor:default}
+    </style>
+    <div id='snowflakeContainer'>
+    <p class='snowflake'>❄</p>
+    </div>
+    <script style='text/javascript'>
+        //<![CDATA[
+        var requestAnimationFrame=window.requestAnimationFrame||window.mozRequestAnimationFrame||window.webkitRequestAnimationFrame||window.msRequestAnimationFrame;var transforms=["transform","msTransform","webkitTransform","mozTransform","oTransform"];var transformProperty=getSupportedPropertyName(transforms);var snowflakes=[];var browserWidth;var browserHeight;var numberOfSnowflakes=50;var resetPosition=false;function setup(){window.addEventListener("DOMContentLoaded",generateSnowflakes,false);window.addEventListener("resize",setResetFlag,false)}setup();function getSupportedPropertyName(b){for(var a=0;a<b.length;a++){if(typeof document.body.style[b[a]]!="undefined"){return b[a]}}return null}function Snowflake(b,a,d,e,c){this.element=b;this.radius=a;this.speed=d;this.xPos=e;this.yPos=c;this.counter=0;this.sign=Math.random()<0.5?1:-1;this.element.style.opacity=0.5+Math.random();this.element.style.fontSize=4+Math.random()*30+"px"}Snowflake.prototype.update=function(){this.counter+=this.speed/5000;this.xPos+=this.sign*this.speed*Math.cos(this.counter)/40;this.yPos+=Math.sin(this.counter)/40+this.speed/30;setTranslate3DTransform(this.element,Math.round(this.xPos),Math.round(this.yPos));if(this.yPos>browserHeight){this.yPos=-50}};function setTranslate3DTransform(a,c,b){var d="translate3d("+c+"px, "+b+"px, 0)";a.style[transformProperty]=d}function generateSnowflakes(){var b=document.querySelector(".snowflake");var h=b.parentNode;browserWidth=document.documentElement.clientWidth;browserHeight=document.documentElement.clientHeight;for(var d=0;d<numberOfSnowflakes;d++){var j=b.cloneNode(true);h.appendChild(j);var e=getPosition(50,browserWidth);var a=getPosition(50,browserHeight);var c=5+Math.random()*40;var g=4+Math.random()*10;var f=new Snowflake(j,g,c,e,a);snowflakes.push(f)}h.removeChild(b);moveSnowflakes()}function moveSnowflakes(){for(var b=0;b<snowflakes.length;b++){var a=snowflakes[b];a.update()}if(resetPosition){browserWidth=document.documentElement.clientWidth;browserHeight=document.documentElement.clientHeight;for(var b=0;b<snowflakes.length;b++){var a=snowflakes[b];a.xPos=getPosition(50,browserWidth);a.yPos=getPosition(50,browserHeight)}resetPosition=false}requestAnimationFrame(moveSnowflakes)}function getPosition(b,a){return Math.round(-1*b+Math.random()*(a+2*b))}function setResetFlag(a){resetPosition=true};
+        //]]>
+    </script>
+    <!-- Topbar Start -->
+    <div class="container-fluid border-bottom d-none d-lg-block">
+        <div class="row gx-0">
+            <div class="col-lg-4 text-center py-2">
+                <div class="d-inline-flex align-items-center">
+                    <i class="bi bi-geo-alt fs-1 text-primary me-3"></i>
+                    <div class="text-start">
+                        <h6 class="text-uppercase mb-1">Trụ sở của chúng tôi</h6>
+                        <span>54B Hồng Hà, Bạch Đằng,Quận 2</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 text-center border-start border-end py-2">
+                <div class="d-inline-flex align-items-center">
+                    <i class="bi bi-envelope-open fs-1 text-primary me-3"></i>
+                    <div class="text-start">
+                        <h6 class="text-uppercase mb-1">Email của chúng tôi</h6>
+                        <span>info@example.com</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 text-center py-2">
+                <div class="d-inline-flex align-items-center">
+                    <i class="bi bi-phone-vibrate fs-1 text-primary me-3"></i>
+                    <div class="text-start">
+                        <h6 class="text-uppercase mb-1">liên hệ</h6>
+                        <span>+012 345 6789</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
+
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-white navbar-light shadow-sm py-3 py-lg-0 px-3 px-lg-0 mb-5">
+        <a href="index.html" class="navbar-brand ms-lg-5">
+            <h1 class="m-0 text-uppercase text-dark"><i class="bi bi-shop fs-1 text-primary me-3"></i>shop thú cưng</h1>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto py-0">
+                <a href="index.html" class="nav-item nav-link">trang chủ</a>
+                <a href="about.html" class="nav-item nav-link">về chúng tôi</a>
+                <a href="service.html" class="nav-item nav-link active">dịch vụ</a>
+                <a href="product.html" class="nav-item nav-link">mặt hàng</a>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">những thứ khác</a>
+                    <div class="dropdown-menu m-0">
+                        <a href="price.html" class="dropdown-item">giá các gói hội viên</a>
+                        <a href="team.html" class="dropdown-item">đội ngũ nhân viên</a>
+                        <a href="testimonial.html" class="dropdown-item">đánh giá khác hàng</a>
+                        <a href="blog.html" class="dropdown-item">Blog Grid</a>
+                        <a href="detail.html" class="dropdown-item">GAME</a>
+                    </div>
+                </div>
+                <a href="contact.html" class="nav-item nav-link nav-contact bg-primary text-white px-5 ms-lg-5">Liên hệ <i class="bi bi-arrow-right"></i></a>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+    
+
+    <!-- Services Start -->
+    <div class="container-fluid py-5">
+        <div class="container">
+            <div class="border-start border-5 border-primary ps-5 mb-5" style="max-width: 600px;">
+                <h6 class="text-primary text-uppercase">dịch vụ</h6>
+                <h1 class="display-5 text-uppercase mb-0">dịch vụ chăm sóc thú cưng tuyệt vời</h1>
+            </div>
+            <div class="row g-5">
+                <div class="col-md-6">
+                    <div class="service-item bg-light d-flex p-4">
+                        <i class="flaticon-house display-1 text-primary me-4"></i>
+                        <div>
+                            <h5 class="text-uppercase mb-3">nội thất cho thú cưng</h5>
+                            <p>việc thú cưng có chỗ để nghỉ ngơi là điều tối quan trọng</p>
+                            <a class="text-primary text-uppercase" href="">tìm hiểu thêm<i class="bi bi-chevron-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="service-item bg-light d-flex p-4">
+                        <i class="flaticon-food display-1 text-primary me-4"></i>
+                        <div>
+                            <h5 class="text-uppercase mb-3">đồ ăn cho thú cưng</h5>
+                            <p>việc cho thú cưng ăn gì sẽ trực tiếp ảnh hưởng đến tâm trạng và sức khỏe của chúng</p>
+                            <a class="text-primary text-uppercase" href="">tìm hiểu thêm<i class="bi bi-chevron-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="service-item bg-light d-flex p-4">
+                        <i class="flaticon-grooming display-1 text-primary me-4"></i>
+                        <div>
+                            <h5 class="text-uppercase mb-3">chãi chuốt</h5>
+                            <p>không ai muốn thú cưng của mình trong bừa bộn cả</p>
+                            <a class="text-primary text-uppercase" href="">tìm hiểu thêm<i class="bi bi-chevron-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="service-item bg-light d-flex p-4">
+                        <i class="flaticon-cat display-1 text-primary me-4"></i>
+                        <div>
+                            <h5 class="text-uppercase mb-3">Huấn Luyện thú cưng</h5>
+                            <p>giúp thú cưng của bạn nghe lời hơn</p>
+                            <a class="text-primary text-uppercase" href="">tìm hiểu thêm<i class="bi bi-chevron-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="service-item bg-light d-flex p-4">
+                        <i class="flaticon-dog display-1 text-primary me-4"></i>
+                        <div>
+                            <h5 class="text-uppercase mb-3">tập thể dục cho thú cưng</h5>
+                            <p>không ai lại muốn thú cưng của mình ú nù cả.Việc quá cân sẽ ảnh hưởng đến cả sức khỏe và tâm sinh lý của thú cưng</p>
+                            <a class="text-primary text-uppercase" href="">tìm hiểu thêm<i class="bi bi-chevron-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="service-item bg-light d-flex p-4">
+                        <i class="flaticon-vaccine display-1 text-primary me-4"></i>
+                        <div>
+                            <h5 class="text-uppercase mb-3">chăm sóc sức khỏe cho thú cưng</h5>
+                            <p>việc bảo đảm sức khỏe cho thú cưng là việc tối quan trọng</p>
+                            <a class="text-primary text-uppercase" href="">tìm hiểu thêm<i class="bi bi-chevron-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Services End -->
+
+
+    <!-- Testimonial Start -->
+    <div class="container-fluid bg-testimonial py-5" style="margin: 45px 0;">
+        <div class="container py-5">
+            <div class="row justify-content-end">
+                <div class="col-lg-7">
+                    <div class="owl-carousel testimonial-carousel bg-white p-5">
+                        <div class="testimonial-item text-center">
+                            <div class="position-relative mb-4">
+                                <img class="img-fluid mx-auto" src="img/testimonial-1.jpg" alt="">
+                                <div class="position-absolute top-100 start-50 translate-middle d-flex align-items-center justify-content-center bg-white" style="width: 45px; height: 45px;">
+                                    <i class="bi bi-chat-square-quote text-primary"></i>
+                                </div>
+                            </div>
+                            <p>Dịch vụ rất tốt</p>
+                            <hr class="w-25 mx-auto">
+                            <h5 class="text-uppercase">adam</h5>
+                            <span>Profession</span>
+                        </div>
+                        <div class="testimonial-item text-center">
+                            <div class="position-relative mb-4">
+                                <img class="img-fluid mx-auto" src="img/testimonial-2.jpg" alt="">
+                                <div class="position-absolute top-100 start-50 translate-middle d-flex align-items-center justify-content-center bg-white" style="width: 45px; height: 45px;">
+                                    <i class="bi bi-chat-square-quote text-primary"></i>
+                                </div>
+                            </div>
+                            <p>Dịch vụ rất tốt</p>
+                            <hr class="w-25 mx-auto">
+                            <h5 class="text-uppercase">eva</h5>
+                            <span>Profession</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Testimonial End -->>
+
+
+    <!-- Pricing Plan Start -->
+    <div class="container-fluid py-5">
+        <div class="container">
+            <div class="border-start border-5 border-primary ps-5 mb-5" style="max-width: 600px;">
+                <h6 class="text-primary text-uppercase">kế hoạch hội viên</h6>
+                <h1 class="display-5 text-uppercase mb-0">giá của các gói hội viên</h1>
+            </div>
+            <div class="row g-5">
+                <div class="col-lg-4">
+                    <div class="bg-light text-center pt-5 mt-lg-5">
+                        <h2 class="text-uppercase">cơ bản</h2>
+                        <h6 class="text-body mb-5">lựa chọn tối ưu</h6>
+                        <div class="text-center bg-primary p-4 mb-2">
+                            <h1 class="display-4 text-white mb-0">
+                                <small class="align-top"
+                                    style="font-size: 22px; line-height: 45px;">$</small>49<small
+                                    class="align-bottom" style="font-size: 16px; line-height: 40px;">/
+                                    Mo</small>
+                            </h1>
+                        </div>
+                        <div class="text-center p-4">
+                            <div class="d-flex align-items-center justify-content-between mb-1">
+                                <span>HTML5 & CSS3</span>
+                                <i class="bi bi-check2 fs-4 text-primary"></i>
+                            </div>
+                            <div class="d-flex align-items-center justify-content-between mb-1">
+                                <span>Bootstrap v5</span>
+                                <i class="bi bi-check2 fs-4 text-primary"></i>
+                            </div>
+                            <div class="d-flex align-items-center justify-content-between mb-1">
+                                <span>Responsive Layout</span>
+                                <i class="bi bi-x fs-4 text-danger"></i>
+                            </div>
+                            <div class="d-flex align-items-center justify-content-between mb-1">
+                                <span>Browsers Compatibility</span>
+                                <i class="bi bi-x fs-4 text-danger"></i>
+                            </div>
+                            <a href="" class="btn btn-primary text-uppercase py-2 px-4 my-3">mua ngay</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="bg-light text-center pt-5">
+                        <h2 class="text-uppercase">thông dụng</h2>
+                        <h6 class="text-body mb-5">lựa chọn hợp lý</h6>
+                        <div class="text-center bg-dark p-4 mb-2">
+                            <h1 class="display-4 text-white mb-0">
+                                <small class="align-top"
+                                    style="font-size: 22px; line-height: 45px;">$</small>99<small
+                                    class="align-bottom" style="font-size: 16px; line-height: 40px;">/
+                                    Mo</small>
+                            </h1>
+                        </div>
+                        <div class="text-center p-4">
+                            <div class="d-flex align-items-center justify-content-between mb-1">
+                                <span>HTML5 & CSS3</span>
+                                <i class="bi bi-check2 fs-4 text-primary"></i>
+                            </div>
+                            <div class="d-flex align-items-center justify-content-between mb-1">
+                                <span>Bootstrap v5</span>
+                                <i class="bi bi-check2 fs-4 text-primary"></i>
+                            </div>
+                            <div class="d-flex align-items-center justify-content-between mb-1">
+                                <span>Responsive Layout</span>
+                                <i class="bi bi-check2 fs-4 text-primary"></i>
+                            </div>
+                            <div class="d-flex align-items-center justify-content-between mb-1">
+                                <span>Browsers Compatibility</span>
+                                <i class="bi bi-x fs-4 text-danger"></i>
+                            </div>
+                            <a href="" class="btn btn-primary text-uppercase py-2 px-4 my-3">mua ngay</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="bg-light text-center pt-5 mt-lg-5">
+                        <h2 class="text-uppercase">nâng cao</h2>
+                        <h6 class="text-body mb-5">lựa chọn tốt nhất</h6>
+                        <div class="text-center bg-primary p-4 mb-2">
+                            <h1 class="display-4 text-white mb-0">
+                                <small class="align-top"
+                                    style="font-size: 22px; line-height: 45px;">$</small>149<small
+                                    class="align-bottom" style="font-size: 16px; line-height: 40px;">/
+                                    Mo</small>
+                            </h1>
+                        </div>
+                        <div class="text-center p-4">
+                            <div class="d-flex align-items-center justify-content-between mb-1">
+                                <span>HTML5 & CSS3</span>
+                                <i class="bi bi-check2 fs-4 text-primary"></i>
+                            </div>
+                            <div class="d-flex align-items-center justify-content-between mb-1">
+                                <span>Bootstrap v5</span>
+                                <i class="bi bi-check2 fs-4 text-primary"></i>
+                            </div>
+                            <div class="d-flex align-items-center justify-content-between mb-1">
+                                <span>Responsive Layout</span>
+                                <i class="bi bi-check2 fs-4 text-primary"></i>
+                            </div>
+                            <div class="d-flex align-items-center justify-content-between mb-1">
+                                <span>Browsers Compatibility</span>
+                                <i class="bi bi-check2 fs-4 text-primary"></i>
+                            </div>
+                            <a href="" class="btn btn-primary text-uppercase py-2 px-4 my-3">mua ngay</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Pricing Plan End -->
+    
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-light mt-5 py-5">
+        <div class="container pt-5">
+            <div class="row g-5">
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-uppercase border-start border-5 border-primary ps-3 mb-4">liên hệ</h5>
+                    <p class="mb-4">những gì bạn thấy trên websites chưa phải là tất cả.Hãy liên hệ để biết thêm vê dịch vụ của chúng tôi</p>
+                    <p class="mb-2"><i class="bi bi-geo-alt text-primary me-2"></i>54B Hồng Hà,Bạch Đằng, Quận 2</p>
+                    <p class="mb-2"><i class="bi bi-envelope-open text-primary me-2"></i>info@example.com</p>
+                    <p class="mb-0"><i class="bi bi-telephone text-primary me-2"></i>+012 345 67890</p>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-uppercase border-start border-5 border-primary ps-3 mb-4">Quick Links</h5>
+                    <div class="d-flex flex-column justify-content-start">
+                        <a class="text-body mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>trang chủ</a>
+                        <a class="text-body mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>về chúng tôi</a>
+                        <a class="text-body mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>dịch vụ</a>
+                        <a class="text-body mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>đội ngũ nhân viên</a>
+                        <a class="text-body mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Latest Blog</a>
+                        <a class="text-body" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>liên hệ</a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-uppercase border-start border-5 border-primary ps-3 mb-4">Popular Links</h5>
+                    <div class="d-flex flex-column justify-content-start">
+                        <a class="text-body mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>trang chủ</a>
+                        <a class="text-body mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>về chúng tôi</a>
+                        <a class="text-body mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Our Services</a>
+                        <a class="text-body mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Đội ngũ nhân viên</a>
+                        <a class="text-body mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Latest Blog</a>
+                        <a class="text-body" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>liên hệ</a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-uppercase border-start border-5 border-primary ps-3 mb-4">thư</h5>
+                    <form action="">
+                        <div class="input-group">
+                            <input type="text" class="form-control p-3" placeholder="Your Email">
+                            <button class="btn btn-primary">đăng kí</button>
+                        </div>
+                    </form>
+                    <h6 class="text-uppercase mt-4 mb-3">hãy theo dõi chúng tôi</h6>
+                    <div class="d-flex">
+                        <a class="btn btn-outline-primary btn-square me-2" href="#"><i class="bi bi-twitter"></i></a>
+                        <a class="btn btn-outline-primary btn-square me-2" href="#"><i class="bi bi-facebook"></i></a>
+                        <a class="btn btn-outline-primary btn-square me-2" href="#"><i class="bi bi-linkedin"></i></a>
+                        <a class="btn btn-outline-primary btn-square" href="#"><i class="bi bi-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="col-12 text-center text-body">
+                    <a class="text-body" href="">các điều khoảng</a>
+                    <span class="mx-1">|</span>
+                    <a class="text-body" href="">quyền riêng tư</a>
+                    <span class="mx-1">|</span>
+                    <a class="text-body" href="">chăm sóc khách hàng</a>
+                    <span class="mx-1">|</span>
+                    <a class="text-body" href="">thanh toán</a>
+                    <span class="mx-1">|</span>
+                    <a class="text-body" href="">giúp </a>
+                    <span class="mx-1">|</span>
+                    <a class="text-body" href="">FAQs</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid bg-dark text-white-50 py-4">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-md-0">&copy; <a class="text-white" href="#">shop thú cưng </a>. All Rights Reserved.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <p class="mb-0">Designed by <a class="text-white" href="https://htmlcodex.com">HTML Codex</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-primary py-3 fs-4 back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
